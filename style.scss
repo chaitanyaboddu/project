@@ -1,0 +1,86 @@
+.contain{
+    padding: 15px;
+}
+
+@mixin important( $fl,$f-d, $j-c, $f-z,$f-f,$b-i,$a-i,$clr,$b-c,$pd) {
+display: $fl;
+flex-direction: $f-d;
+justify-content: $j-c;
+font-size: $f-z;
+font-family: $f-f;
+background-image: $b-i;
+align-items: $a-i;
+color:$clr;
+background-color: $b-c;
+padding: $pd;
+    
+}
+.maindiv{
+    @include important(flex,row,space-between,12px,OpenSans-Bold,null,center,null,null,null)
+
+}
+@mixin important1($b-i,$dis,$f-d,$j-c,$f-z,$bor-bottom-r-r,$bor-top-left-r,$pd,$clr) {
+    background-image: $b-i;
+    display: $dis;
+    flex-direction: $f-d;
+    justify-content: $j-c;
+    font-size: $f-z;
+    border-bottom-right-radius:$bor-bottom-r-r;
+    border-top-left-radius:$bor-top-left-r;
+    padding: $pd;
+    color: $clr;
+}
+.heading{
+    @include important(flex,row,space-between,12px,OpenSans-Bold,null,null,null,null,null)
+}
+.head1{
+@include important1( linear-gradient(to bottom right, rgb(0, 89, 255), rgb(140, 0, 255)),flex,row,space-between,14px,50px,null,15px,white)
+}
+.head2{
+    @include important1( linear-gradient(to bottom right, rgb(0, 89, 255), rgb(140, 0, 255)),flex,row,space-between,14px,null,50px,15px,white)  
+}
+// .head1{
+//     @include important1(null,null,null,null,14px,50px,null) 
+// }
+.body{
+    @include important(flex,row,space-between,12px,OpenSans-Bold,null,center,null,null,null)
+}
+.bill{
+    @include important(flex,column,space-between,12px,OpenSans-Bold,null,flex-end,null,null,null)
+}
+table {
+    font-family:'OpenSans-Bold', Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    color:grey;
+    table-layout: fixed;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+  .account{
+    @include important(flex,row,space-between,14px,OpenSans-Bold,null,null,grey,null,null)
+  }
+  .account h4{
+      color: black;
+  }
+  .footer{
+    @include important(flex,row,flex-start,14px,OpenSans-Bold,null,null,white,blue,15px)  
+
+  }
+  @mixin important2($pr,$di){
+      padding-right:$pr;
+      display: $di;
+  }
+  
+    .footer1{
+@include important2(5px,flex)
+    }
+  .bi{
+      @include important2(5px,null)
+  }
+ 
